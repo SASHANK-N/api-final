@@ -1,0 +1,14 @@
+steps:
+  - name: 'gcr.io/cloud-builders/mvn'
+    args: ['clean', 'package', '-DskipTests']
+
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'api-final'
+      - '--source=.'
+      - '--entry-point=DemoApplication'
+      - '--region=us-central1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
