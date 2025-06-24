@@ -10,7 +10,6 @@ steps:
       - 'deploy'
       - 'api-final'
       - '--source=.'
-      - '--entry-point=DemoApplication'
       - '--region=us-central1'
       - '--platform=managed'
       - '--allow-unauthenticated'
