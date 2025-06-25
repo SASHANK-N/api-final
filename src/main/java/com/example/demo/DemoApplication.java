@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
 @RestController
+@CrossOrigin(origins = "*")
 public class DemoApplication {
 
 	public static void main(String[] args) {
